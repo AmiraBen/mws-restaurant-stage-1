@@ -40,11 +40,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   min-height: 100%;
 }
 #footer {
+  padding-top:20px;
+  padding-bottom: 20px;
   background-color: #444;
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -114,7 +115,7 @@ nav h1 a {
   padding:5px;
   display:flex;
   flex-direction: column;
-  
+
 }
 .filter-options h2 {
   color: white;
@@ -142,6 +143,10 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -151,7 +156,7 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: calc(100%-50px);
+  width: calc(50%-50px);
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -287,9 +292,22 @@ nav h1 a {
 
 /* Tablets */
 @media screen and (min-width: 480px) and (max-width: 899px) {
+  #reviews-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #reviews-list li {
+    width: 33.333%;
+  }
 
 }
 /* Desktop */
 @media screen and (min-width: 900px) {
-    
+  #reviews-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #reviews-list li {
+    width: 50%;
+  }
 }
